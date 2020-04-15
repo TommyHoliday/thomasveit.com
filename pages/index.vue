@@ -6,7 +6,7 @@
         thomasveit.com
       </h1>
       <h2 class="subtitle">
-        Personal Website of Thomas Veit
+        Personal Website of Thomas Veit lol
       </h2>
       <div class="links">
         <a
