@@ -62,7 +62,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    publicPath: './',
     extend(config, ctx) {}
   }
 }
