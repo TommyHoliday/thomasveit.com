@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "nuxt": "^2.12.2"
+    "nuxt": "^2.12.2",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "bootstrap-vue": "^2.11.0",

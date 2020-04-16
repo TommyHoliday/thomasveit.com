@@ -39,7 +39,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{
+    src: '~/plugins/js/typed.js',
+    ssr: false
+  }],
 
   /*
    ** Nuxt.js dev-modules
@@ -59,6 +62,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    publicPath: './',
     extend(config, ctx) {}
   }
 }
