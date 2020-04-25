@@ -49,6 +49,8 @@ h6
 h1
     font-size: 64px
     letter-spacing: -1.8px
+    position: relative
+    overflow: hidden
 
 h2
     font-size: 48px
@@ -91,7 +93,7 @@ a
     font-size: 20px
 
 strong 
-    background: rgba(80,227,194,0.3)
+    background: linear-gradient(180deg, rgba(255,255,255,0.3) 60%, rgba(80,227,194,0.3) 60%)
     font-weight: normal
 
 ul,
@@ -300,28 +302,23 @@ main
         font-size: 20px
         color: $text
         outline: none
+  
+.page-enter-active,
+.page-leave-active
+  transition: all ease-in-out 600ms
 
-@keyframes page-in
-    0%
-        transform: translateY(30px)
-        opacity: 0
-    100%
-        transform: translateY(0)
-        opacity: 1
+.page-enter,
+.page-leave-to
+  opacity: 0
 
-.page-in
-    animation-name: page-in
+.page-enter-active #header,
+.page-leave-active #header
+  transition: all ease-in-out 600ms
 
-@keyframes page-out
-    0%
-        transform: translateY(0)
-        opacity: 1
-    100%
-        transform: translateY(30px)
-        opacity: 0
+.page-enter #header,
+.page-leave-to #header
+  transform: translateY(-100%)
 
-.page-out
-    animation-name: page-out
 
 /* 02. Header */
 header
