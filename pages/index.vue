@@ -1,5 +1,6 @@
 <template>
   <main>
+    <Navigation />
     <div class="spacer">
       <div class="container">
         <div class="row">
@@ -90,10 +91,13 @@
         </div>
       </div>
     </div>
+    <Footer />
   </main>
 </template>
 
 <script>
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import Vue from "vue";
 import { VueTypedJs } from "vue-typed-js";
 
@@ -133,13 +137,18 @@ var greetingMessage = function() {
 };
 
 export default {
+  components: {
+    Navigation,
+    Footer
+  },
   mounted: function() {
     greetingMessage();
-  }
+  },
+  transition: "page"
 };
 </script>
 
-<style>
+<style scoped>
 .typed-element {
   display: inline;
 }

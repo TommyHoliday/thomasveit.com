@@ -1,5 +1,6 @@
 <template>
   <main>
+    <Navigation />
     <div class="spacer">
       <div class="container">
         <div class="row">
@@ -137,11 +138,21 @@
         </div>
       </div>
     </div>
+    <Footer />
   </main>
 </template>
 
 <script>
-export default {};
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
+export default {
+  components: {
+    Navigation,
+    Footer
+  },
+  transition: "page"
+}
 </script>
 
 <style>

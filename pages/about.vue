@@ -1,40 +1,36 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        thomasveit.com
-      </h1>
-      <h2 class="subtitle">
-       Asshole
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <main>
+    <Navigation />
+    <div class="spacer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mar-top-lg offset-lg-1">
+            <h1>About me</h1>
+            <p class="lead">
+              I constantly push myself outside my comfort zone and intuively follow my curiosity. I firmly believe that it leads to new doors and opens hearts. ❤️ Curiosity is about a mindset of looking at the world in a playful and creative way. It taught me critical thinking and it leads me to discovering and chasing my dreams.
+
+I'm a Campaigner type of guy.
+Self-leadership
+story about kicktrip and why i failed. what did i learn from it?
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <Footer />
+  </main>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default {
   components: {
-    Logo
-  }
+    Navigation,
+    Footer
+  },
+  transition: "page"
 }
 </script>
 
