@@ -41,37 +41,38 @@
                 target="_blank"
               >mobile app for my football club</a>.
             </p>
-            <div>
+            <p class="lead">
               Also, I'm interested in
-              <vue-typed-js :strings="['John', 'James']" :shuffle="true">
-                <h1>
-                  Hey
-                  <span class="typing"></span>
-                </h1>
+              <vue-typed-js
+                :strings="['frontend development.', 'technology.', 'people and psychology.', 'prototyping.', 'leadership.', 'football. ⚽️', 'design ops.', 'teaching.', 'artificial intelligence. 🤖', 'remote working.', 'travelling and cultures. 🌴', 'personal growth. 🌱', 'productivity.', 'entrepreneurship.', 'productive procrastination. 🙄']"
+                :shuffle="true"
+                :typeSpeed="50"
+                :backSpeed="40"
+                :backDelay="2500"
+                :loop="true"
+                :fadeOut="true"
+              >
+                <span class="typing"></span>
               </vue-typed-js>
-            </div>
+            </p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <div class="mar-top-md">
               <div class="page-content-image">
-                <a href="project-haeschcash.html" class="no-border">
+                <nuxt-link to="/projects/haeschcash" class="no-border">
                   <img
                     src="~/assets/img/haeschcaesh/iphone-haeschcaesh.png"
                     class="image-cover"
                     alt="HäschCash SavingsApp"
                   />
                   <img src="~/assets/img/haeschcaesh/background.jpg" alt="Background" />
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="trigger"></div>
-      <div id="target">
-        <img src="~/assets/img/scrollmagic/plane.svg" alt="plane" id="plane" />
       </div>
       <div class="container">
         <div class="mar-top-lg">
@@ -138,4 +139,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.typed-element {
+  display: inline;
+}
+</style>
