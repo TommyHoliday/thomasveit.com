@@ -8,7 +8,7 @@
                     <div class="wrap">
                         <div class="address">
                             <p>Bankstrasse 2<br>8590 Romanshorn<br>Switzerland</p>
-                        </div><a class="email" href="mailto:hello@blunes.com">hello@blunes.com</a><br><a class="phone" href="tel:5226669113">522-666-9113</a>
+                        </div><a class="email" href="mailto:hallo@thomasveit.com">hallo@thomasveit.com</a>
                     </div>
                 </div>
             </div>

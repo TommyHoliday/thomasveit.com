@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: process.env.npm_package_name || "Thomas Veit",
     meta: [
       {
         charset: "utf-8",
@@ -22,8 +22,8 @@ export default {
     link: [
       {
         rel: "icon",
-        type: "image/x-icon",
-        href: "/favicon.ico",
+        type: "image/png",
+        href: "/favicon.png",
       },
       {
         rel: "stylesheet",

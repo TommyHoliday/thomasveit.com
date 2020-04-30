@@ -4,7 +4,7 @@
     <div class="spacer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 offset-lg-1 mar-top-lg text-center">
+          <div class="col-lg-10 offset-lg-1 mar-top-md">
             <h1>#HäschCash – A Savings App for young people</h1>
             <p class="lead">
               With different saving methods and witty rules, the saver comes closer to his goal and can make
@@ -151,7 +151,15 @@ export default {
     Navigation,
     Footer
   },
-  transition: "page"
+  transition: "page",
+  head () {
+    return {
+      title: "Thomas Veit | Project | HäschCash",
+      meta: [
+        { hid: 'description', name: 'description', content: '' }
+      ]
+    }
+  }
 }
 </script>
 

@@ -4,7 +4,9 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _6dbcf23c = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _74c2d5ee = () => interopDefault(import('../pages/projects/haeschcash.vue' /* webpackChunkName: "pages/projects/haeschcash" */))
+const _058c524c = () => interopDefault(import('../pages/journal.vue' /* webpackChunkName: "pages/journal" */))
+const _112e19b5 = () => interopDefault(import('../pages/projects.vue' /* webpackChunkName: "pages/projects" */))
+const _b1f26820 = () => interopDefault(import('../pages/project/haeschcash.vue' /* webpackChunkName: "pages/project/haeschcash" */))
 const _2e4d3cb2 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
@@ -28,9 +30,17 @@ export const routerOptions = {
     component: _6dbcf23c,
     name: "about"
   }, {
-    path: "/projects/haeschcash",
-    component: _74c2d5ee,
-    name: "projects-haeschcash"
+    path: "/journal",
+    component: _058c524c,
+    name: "journal"
+  }, {
+    path: "/projects",
+    component: _112e19b5,
+    name: "projects"
+  }, {
+    path: "/project/haeschcash",
+    component: _b1f26820,
+    name: "project-haeschcash"
   }, {
     path: "/",
     component: _2e4d3cb2,

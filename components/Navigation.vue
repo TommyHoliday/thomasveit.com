@@ -4,7 +4,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="logo">
-            <nuxt-link to="/" class="logo-type">Thomas Veit</nuxt-link>
+            <nuxt-link to="/" class="logo-type">
+              Thomas Veit <img src="~/assets/img/thomas-veit-logo.svg" alt="Thomas Veit Logo" />
+            </nuxt-link>
           </div>
           <nav>
             <ul>
@@ -12,16 +14,10 @@
                 <nuxt-link to="/" class="navi-link">Home</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/about" class="navi-link">About</nuxt-link>
-              </li>
-              <li>
                 <nuxt-link to="/projects" class="navi-link">Projects</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/playground" class="navi-link">Playground</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/contact" class="navi-link">Contact</nuxt-link>
+                <nuxt-link to="/journal" class="navi-link">Journal</nuxt-link>
               </li>
             </ul>
           </nav>
