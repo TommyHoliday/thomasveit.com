@@ -46,7 +46,11 @@ export default {
    */
   plugins: [
     {
-      src: "~/plugins/js/typed.js",
+      src: "~/plugins/typed.js",
+      ssr: false,
+    },
+    {
+      src: "~/plugins/scrollmagic.js",
       ssr: false,
     },
   ],

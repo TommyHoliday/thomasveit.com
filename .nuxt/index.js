@@ -12,7 +12,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_bootstrapvue_790d2846 from 'nuxt_plugin_bootstrapvue_790d2846' // Source: ./bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_typed_3513061d from 'nuxt_plugin_typed_3513061d' // Source: ../plugins/js/typed.js (mode: 'client')
+import nuxt_plugin_typed_6a64527a from 'nuxt_plugin_typed_6a64527a' // Source: ../plugins/typed.js (mode: 'client')
+import nuxt_plugin_scrollmagic_859e9826 from 'nuxt_plugin_scrollmagic_859e9826' // Source: ../plugins/scrollmagic.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -155,8 +156,12 @@ async function createApp (ssrContext) {
     await nuxt_plugin_bootstrapvue_790d2846(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_typed_3513061d === 'function') {
-    await nuxt_plugin_typed_3513061d(app.context, inject)
+  if (process.client && typeof nuxt_plugin_typed_6a64527a === 'function') {
+    await nuxt_plugin_typed_6a64527a(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_scrollmagic_859e9826 === 'function') {
+    await nuxt_plugin_scrollmagic_859e9826(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first
