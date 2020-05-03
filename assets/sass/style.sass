@@ -154,6 +154,7 @@ ol
     position: absolute
     width: 100%
     animation: MoveUpDown 3s ease-in-out infinite
+
 @keyframes MoveUpDown
     0%
         transform: translateY(0px)
@@ -368,9 +369,11 @@ header
         letter-spacing: -0.2px
         text-transform: capitalize
         color: #272838
-        border-bottom: 2px solid rgba(0, 15, 255, 0)
         padding-bottom: none
-        transition: 200ms color ease-in-out, 200ms border-color ease-in-out
+    .logo-type
+        &:hover
+            text-decoration: none
+
     nav
         float: right
         ul
@@ -556,229 +559,29 @@ footer
     color: $grey
 
 /* 05. Works */
-.works
-    .works-filters
-        font-family: "Work Sans", sans-serif
-        font-weight: 800
-        font-size: 22px
-        letter-spacing: -0.2px
-        color: $header
-        .open-filters
-            display: inline-block
-            color: $primary
-            position: relative
-            margin-top: 18px
-            border-bottom: 2px solid transparentize($primary, 0.68)
-            padding-bottom: 3px
-            transition: 200ms border-color ease-in-out
-            &:hover
-                cursor: pointer
-                border-color: $primary
-        .fullscreen-filters
-            display: flex
-            position: fixed
-            width: 100%
-            height: 100%
-            top: 0
-            left: 0
-            background-color: transparentize($white, 0.04)
-            z-index: 999
-            visibility: hidden
-            opacity: 0
-            transition: 100ms opacity linear, 100ms visibility linear
-            &.open
-                visibility: visible
-                opacity: 1
-                ul
-                    li
-                        line-height: 1
-                        opacity: 1
-                        transform: translateY(0)
-                        @for $i from 1 through 10
-                            &:nth-child(#{$i})
-                                transition: 200ms #{$i*80}ms transform ease-in-out, 200ms #{$i*80}ms opacity ease-in-out, 120ms color ease-in-out
-            .close-filters
-                display: inline-block
-                position: absolute
-                top: 30px
-                right: 60px
-                border-bottom: 2px solid transparentize($primary, 0.68)
-                padding-bottom: 4px
-                color: $primary
-                transition: 200ms color ease-in-out, 200ms border-color ease-in-out
-                &:hover
-                    color: $primary
-                    cursor: pointer
-                    border-color: $primary
-            ul
-                width: 100%
-                max-width: 1140px
-                padding: 0
-                margin: auto
-                list-style: none
-                text-align: center
-                li
-                    display: inline-block
-                    position: relative
-                    font-size: 64px
-                    letter-spacing: -0.8px
-                    color: $header
-                    margin: 36px
-                    opacity: 0
-                    transform: translateY(-8px)
-                    &.current
-                        color: $primary
-                    &:hover
-                        cursor: pointer
-                        color: $primary
-                    span
-                        display: inline-block
-                        font-size: 32px
-                        letter-spacing: -0.6px
-                        vertical-align: top
-                        margin-left: 12px
-    .works-grid
-        margin-top: 80px
-    .work-item
-        display: block
-        border-bottom: 0
-        .work-image
-            position: relative
-            display: flex
-            align-items: center
-            justify-content: center
-            img
-                width: 100%
-            &:after
-                content: ""
-                display: block
-                position: absolute
-                top: 0
-                left: 0
-                width: 100%
-                height: 100%
-                background-color: transparentize($primary, 0.12)
-                transition: 300ms opacity ease-in-out
-                opacity: 0
-        .icon-arrow
-            display: block
-            margin: auto
-            width: 36px
-            position: absolute
-            z-index: 1
-            &:before
-                content: ""
-                position: absolute
-                display: block
-                width: 100%
-                height: 2px
-                background-color: $white
-                transform-origin: right center
-                transform: scaleX(0)
-                transition: 300ms transform cubic-bezier(0, 0.75, 0.45, 1)
-            &:after
-                content: ""
-                display: block
-                position: absolute
-                right: 0
-                top: -4px
-                width: 10px
-                height: 10px
-                border-top: 2px solid $white
-                border-right: 2px solid $white
-                transform: rotate(45deg)
-                opacity: 0
-                transition: 300ms opacity ease-in-out 0
-        .work-description
-            margin-top: 14px
-            position: relative
-        .work-title
-            display: inline
-            border-bottom: 2px solid transparentize($primary, 1)
-            transition: 200ms border-color ease-in-out, 200ms color ease-in-out
-        .work-services
-            margin: 0
-            padding: 0
-            margin-top: 4px
-            list-style: none
-            font-size: 18px
-            color: $grey
-            li
-                display: inline-block
-                &:after
-                    content: "—"
-                    display: inline-block
-                    margin-left: 6px
-                    margin-right: 2px
-                &:last-child
-                    &:after
-                        display: none
-        &:hover
-            .work-image
-                &:after
-                    opacity: 1
-            .icon-arrow
-                &:before
-                    transform-origin: left center
-                    transform: scaleX(1)
-                &:after
-                    opacity: 1
-                    transition: 300ms opacity ease-in-out 150ms
-            .work-title
-                color: $primary
-                border-color: transparentize($primary, 0.68)
-    &.columns-2
-        .work-item
-            width: 46.4%
-            margin-bottom: 64px
-        .works-gutter
-            width: 7%
-        .work-description
-            margin-top: 24px
-    &.columns-3
-        .work-item
-            width: 29.7%
-            margin-bottom: 56px
-        .works-gutter
-            width: 5.4%
-        .work-description
-            margin-top: 20px
-    &.clean
-        .works-grid
-            margin-bottom: 56px
-        .work-item
-            width: 48.9%
-            margin-bottom: 24px
-            &:hover
-                .work-title
-                    color: $white
-                    border-color: transparentize($white, 0.68)
-                    transition: 300ms opacity cubic-bezier(0.4, 0.570, 0.560, 1), 200ms border-color ease-in-out
-                    &:hover
-                        border-color: $white
-                    opacity: 1
-                .work-services
-                    opacity: 1
-        .work-description
-            position: absolute
-            bottom: 0
-            left: 0
-            padding: 32px 120px 32px 40px
-        .work-title
-            color: $white
-            border-color: transparentize($white, 0.68)
-            display: inline
-            opacity: 0
-            transition: 300ms opacity cubic-bezier(0.4, 0.570, 0.560, 1)
-        .work-services
-            opacity: 0
-            color: transparentize($white, 0.28)
-            transition: 300ms opacity cubic-bezier(0.4, 0.570, 0.560, 1)
-        .works-gutter
-            width: 2.16%
-        .icon-arrow
-            right: 48px
-            bottom: 0
+#robot
+    -webkit-animation: mover 1s infinite  alternate
+    animation: mover 1s infinite  alternate
+
+
+@keyframes mover 
+    0%
+        transform: translateY(15px)
+    100%
+        transform: translateY(0px)
+
+#shadow 
+    -webkit-animation: shadow 1s infinite  alternate
+    animation: shadow 1s infinite  alternate
+
+@keyframes shadow
+    0%
+        transform: scale(1) 
+        transform-origin: bottom center
+    100%
+        transform: scale(1.15) 
+        transform-origin: bottom center
+
 
 /* 06. Project */
 .project-intro

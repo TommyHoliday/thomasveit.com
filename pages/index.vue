@@ -93,7 +93,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Vue from "vue";
 import { VueTypedJs } from "vue-typed-js";
-import { TweenMax } from 'gsap'
+import { TweenMax, TimelineMax } from 'gsap'
 
 Vue.use(VueTypedJs);
 
@@ -159,29 +159,33 @@ export default {
     Navigation,
     Footer
   },
-  mounted: function() {
+  mounted() {
     // Greeting Message
     greetingMessage();
 
     // Scrollmagic
-    var timeline = new TimelineMax();
+    const timeline = new TimelineMax();
 
     timeline
-    .to('body', 0.5, {
-      backgroundColor: "#000"
+    .to('body', 1, {
+      css: {
+        backgroundColor: "#000"
+      }    
     })
-    .to('h1,h2,h3,h4,h5,h6,p', 0.5, {
-      color: "#fff"
-    })    
+    .to('h1,h2,h3,h4,h5,h6,p', 1, {
+      css: {
+        color: "#fff"
+      }
+    })  
 
-    var scene1 = this.$scrollmagic.scene({
+    const scene1 = this.$scrollmagic.scene({
       triggerElement: '#switchBlack',
-      duration: "500"
+      duration: "20%"
     })
     .setTween(timeline)
     .addIndicators();
 
-    this.$scrollmagic.addScene(scene1);
+    //this.$scrollmagic.addScene(scene1);
 
   },
   transition: "page",
