@@ -93,7 +93,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Vue from "vue";
 import { VueTypedJs } from "vue-typed-js";
-import { TweenMax, TimelineMax } from 'gsap'
+//import { TweenMax, TimelineMax } from 'gsap'
 
 Vue.use(VueTypedJs);
 
@@ -185,7 +185,7 @@ export default {
     .setTween(timeline)
     .addIndicators();
 
-    //this.$scrollmagic.addScene(scene1);
+    this.$scrollmagic.addScene(scene1);
 
   },
   transition: "page",

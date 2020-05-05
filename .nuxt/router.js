@@ -7,6 +7,7 @@ const _058c524c = () => interopDefault(import('../pages/journal.vue' /* webpackC
 const _112e19b5 = () => interopDefault(import('../pages/projects.vue' /* webpackChunkName: "pages/projects" */))
 const _54afc1cb = () => interopDefault(import('../pages/project/axa-chatbot.vue' /* webpackChunkName: "pages/project/axa-chatbot" */))
 const _b1f26820 = () => interopDefault(import('../pages/project/haeschcash.vue' /* webpackChunkName: "pages/project/haeschcash" */))
+const _17be605c = () => interopDefault(import('../pages/project/kicktrip.vue' /* webpackChunkName: "pages/project/kicktrip" */))
 const _2e4d3cb2 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
@@ -41,6 +42,10 @@ export const routerOptions = {
     path: "/project/haeschcash",
     component: _b1f26820,
     name: "project-haeschcash"
+  }, {
+    path: "/project/kicktrip",
+    component: _17be605c,
+    name: "project-kicktrip"
   }, {
     path: "/",
     component: _2e4d3cb2,
